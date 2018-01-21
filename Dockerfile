@@ -10,7 +10,8 @@ apt-get install --yes \
     sudo \
     xutils
 
-## PropGCC
+# PropGCC
+ENV PROPGCC_PREFIX=/opt/parallax.gcc4_1.9.0
 RUN wget "http://david.zemon.name:8111/repository/download/PropGCC5_Gcc4linuxX64/1641:id/propellergcc-alpha_v1_9_0-gcc4-linux-x64.tar.gz?guest=1" \
        --quiet \
        -O /tmp/propgcc4.tar.gz && \
