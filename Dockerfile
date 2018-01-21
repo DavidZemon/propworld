@@ -59,7 +59,7 @@ RUN wget "http://david.zemon.name:8111/repository/download/Spin2Cpp_Linux/1796:i
     tar -xf /tmp/spin2cpp.tar.gz -C /usr/local/bin && \
     rm /tmp/spin2cpp.tar.gz
 
-# PropLoader
+# OpenSpin
 RUN wget "http://david.zemon.name:8111/repository/download/OpenSpin_LinuxX8664/1798:id/openspin.tar.gz?guest=1" \
         --quiet \
         -O /tmp/openspin.tar.gz && \
