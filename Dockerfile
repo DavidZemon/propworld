@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
@@ -12,7 +12,7 @@ apt-get install --yes \
 
 # PropGCC
 ENV PROPGCC_PREFIX=/opt/parallax.gcc4_1.9.0
-RUN wget "http://david.zemon.name:8111/repository/download/PropGCC5_Gcc4linuxX64/1641:id/propellergcc-alpha_v1_9_0-gcc4-linux-x64.tar.gz?guest=1" \
+RUN wget "http://david.zemon.name:8111/repository/download/PropGCC5_Gcc4linuxX64/2002:id/propellergcc-alpha_v1_9_0-gcc4-linux-x64.tar.gz?guest=1" \
        --quiet \
        -O /tmp/propgcc4.tar.gz && \
     tar -xf /tmp/propgcc4.tar.gz --directory /tmp && \
@@ -20,7 +20,7 @@ RUN wget "http://david.zemon.name:8111/repository/download/PropGCC5_Gcc4linuxX64
     rm /tmp/propgcc4.tar.gz
 
 # PropWare
-RUN wget "http://david.zemon.name:8111/repository/download/PropWare_Develop/1794:id/propware_3.0.0.162-1_amd64.deb?guest=1" \
+RUN wget "http://david.zemon.name:8111/repository/download/PropWare_Develop/2503:id/propware_3.0.0.182-1_amd64.deb?guest=1" \
         --quiet \
         -O /tmp/propware.deb && \
     dpkg -i /tmp/propware.deb ; \
@@ -53,14 +53,14 @@ RUN wget "http://david.zemon.name:8111/repository/download/PropLoader_LinuxX64/1
     rm /tmp/proploader.tar.gz
 
 # Spin2Cpp
-RUN wget "http://david.zemon.name:8111/repository/download/Spin2Cpp_Linux/1796:id/spin2cpp.tar.gz?guest=1" \
+RUN wget "http://david.zemon.name:8111/repository/download/Spin2Cpp_Linux/2500:id/spin2cpp.tar.gz?guest=1" \
         --quiet \
         -O /tmp/spin2cpp.tar.gz && \
     tar -xf /tmp/spin2cpp.tar.gz -C /usr/local/bin && \
     rm /tmp/spin2cpp.tar.gz
 
 # OpenSpin
-RUN wget "http://david.zemon.name:8111/repository/download/OpenSpin_LinuxX8664/1798:id/openspin.tar.gz?guest=1" \
+RUN wget "http://david.zemon.name:8111/repository/download/OpenSpin_LinuxX8664/2226:id/openspin.tar.gz?guest=1" \
         --quiet \
         -O /tmp/openspin.tar.gz && \
     tar -xf /tmp/openspin.tar.gz -C /usr/local/bin && \
